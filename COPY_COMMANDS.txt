@@ -1,0 +1,71 @@
+TRUNCATE TABLE CITIES;
+COPY INTO cities
+FROM s3://bucketofks/orders/2025-06-28/cities.csv
+CREDENTIALS = (aws_key_id = 'YOUR_AWS_KEY_ID'
+aws_secret_key = 'YOUR_AWS_SECRET_KEY')
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1);
+-------------------------------------------------------------------------------------
+
+TRUNCATE TABLE customers;
+COPY INTO customers
+FROM s3://bucketofks/orders/2025-06-28/customers.csv
+CREDENTIALS = (aws_key_id = 'YOUR_AWS_KEY_ID'
+aws_secret_key = 'YOUR_AWS_SECRET_KEY')
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1);
+-------------------------------------------------------------------------------------
+
+TRUNCATE TABLE orders;
+COPY INTO orders
+FROM s3://bucketofks/orders/2025-06-28/orders.csv
+CREDENTIALS = (aws_key_id = 'YOUR_AWS_KEY_ID'
+aws_secret_key = 'YOUR_AWS_SECRET_KEY')
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1);
+-------------------------------------------------------------------------------------
+
+TRUNCATE TABLE order_items;
+COPY INTO order_items
+FROM s3://bucketofks/orders/2025-06-28/order_items.csv
+CREDENTIALS = (aws_key_id = 'YOUR_AWS_KEY_ID'
+aws_secret_key = 'YOUR_AWS_SECRET_KEY')
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1);
+-------------------------------------------------------------------------------------
+
+TRUNCATE TABLE pincodes;
+COPY INTO pincodes
+FROM s3://bucketofks/orders/2025-06-28/pincodes.csv
+CREDENTIALS = (aws_key_id = 'YOUR_AWS_KEY_ID'
+aws_secret_key = 'YOUR_AWS_SECRET_KEY')
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1);
+-------------------------------------------------------------------------------------
+
+TRUNCATE TABLE products;
+COPY INTO products
+FROM s3://bucketofks/orders/2025-06-28/products.csv
+CREDENTIALS = (aws_key_id = 'YOUR_AWS_KEY_ID'
+aws_secret_key = 'YOUR_AWS_SECRET_KEY')
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1);
+------------------------------------------------------------------------------------
+
+TRUNCATE TABLE shipments;
+COPY INTO shipments
+FROM s3://bucketofks/orders/2025-06-28/shipments.csv
+CREDENTIALS = (aws_key_id = 'YOUR_AWS_KEY_ID'
+aws_secret_key = 'YOUR_AWS_SECRET_KEY')
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1);
+-------------------------------------------------------------------------------------
+
+TRUNCATE TABLE subcategories;
+COPY INTO subcategories
+FROM s3://bucketofks/orders/2025-06-28/subcategories.csv
+CREDENTIALS = (aws_key_id = 'YOUR_AWS_KEY_ID'
+aws_secret_key = 'YOUR_AWS_SECRET_KEY')
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1);
+
+SELECT * FROM ORDERS
+SELECT * FROM ORDER_ITEMS
+SELECT * FROM CUSTOMERS
+SELECT * FROM PRODUCTS
+
+
+
+

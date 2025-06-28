@@ -1,0 +1,76 @@
+CREATE TABLE cities(
+	id int ,
+	city varchar(255) ,
+	state varchar(255) ,
+	region varchar(255) ,
+	country varchar(255),
+	last_updated_at date
+) ;
+
+
+
+CREATE TABLE customers(
+	id int ,
+	username varchar(255) ,
+	customer_name varchar(255) ,
+	segment varchar(255) ,
+	pincode_id varchar (255),
+	last_updated_at date 
+) ;
+
+
+
+CREATE TABLE order_items(
+	order_id int ,
+	product_id int ,
+	quantity int ,
+	sales decimal(8,2),
+	last_updated_at date 
+);
+
+
+
+CREATE TABLE orders(
+	order_id int ,
+	order_number varchar(255) ,
+	order_date date ,
+	customer_id int ,
+	discount decimal(6,2),
+	last_updated_at date 
+);
+
+ 
+CREATE TABLE pincodes(
+	id int ,
+	postal_code varchar(20) ,
+	city_id int,
+	last_updated_at date 
+); 
+
+
+CREATE TABLE products(
+	id int ,
+	sku_id varchar(255) ,
+	product_name varchar(255) ,
+	price decimal(6,2) ,
+	sub_category_id int,
+	last_updated_at date 
+); 
+
+
+
+CREATE TABLE shipments(
+	order_id int ,
+	product_id int ,
+	ship_date date ,
+	ship_mode varchar(255),
+	last_updated_at date 
+);
+
+
+CREATE TABLE subcategories(
+	id int ,
+	sub_category varchar(255) ,
+	category varchar(255),
+	last_updated_at date 
+);
